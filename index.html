@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notebooks</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <form id="form" onsubmit="handleFormSubmit(event)">
+        <div id="header"> <h1>NoteBook</h1>
+            Search Notes:<input id="search" type="text"><br>
+            Total:<input id="totalNotes" type="text">
+            Showing:<input id="showing" type="text">
+        </div>
+            <br>
+        <div id="container">
+            <div>
+                <label for="title">Notebook Title : </label>
+                <input type="text" id="title" required>
+            </div>
+            <div>
+                <label for="description">Notebook description : </label><br>
+                <textarea id="description" name="description"></textarea>
+            </div>
+        </div>
+        <button class="btn">Add to Notebook</button>
+    </form>
+    <ul id="listOfNotes"></ul>
+    
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+  <script src="main.js"></script>
+</html>
+
